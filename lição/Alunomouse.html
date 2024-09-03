@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <title>Alteração de Atributos</title>
+        <style>
+        #caixa {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="caixa" onmouseover="mudarCor()"onmouseout="reverterCor()"></div>
+        <script>
+            function mudarCor() {
+                document.getElementById("caixa").style.backgroundColor = "darkblue";
+                document.getElementById("caixa").style.borderRadius = "50%"
+            }
+            
+            function reverterCor() {
+                document.getElementById("caixa").style.backgroundColor = "lightblue";
+                document.getElementById("caixa").style.borderRadius = "0%"
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <title>Inserção de Elementos</title>
+    </head>
+    <body>
+        <ul id="Turma2DS">
+            <h1>Campeões Mundiais de Xadrez</h1>
+            <ol>Wilhelm Steinitz</ol>
+            <ol>Emanuel Lasker</ol>
+            <ol>José Raul Capablanca</ol>
+        </ul>
+            <button onclick="adicionarItem()">Adicionar 
+            Campeões Mundiais de Xadrez</button>
+            <script>
+            function adicionarItem() {
+                const novoItem = document.createElement("ol");
+                const list = document.getElementById("Turma2DS")
+                novoItem.textContent = "Alexander Alekhine";
+                document.getElementById("Turma2DS").appendChild(novoItem);
+            }
+            </script>            
+    </body>
+</html>

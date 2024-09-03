@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validar Campo</title>
+        <style>
+            .form{
+                display: flex;
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            form{
+                border: 1px solid black;
+                display: inline-block;
+                padding: 10px;
+                background-color: lightblue;
+            }
+
+            input{
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <form>
+                <label for="txtCEP">CEP:</label><input type="text" id="txtCEP" ><br>
+                <label for="txtEndereco">Endereço:</label><input type="text" id="txtEndereco"><br>
+                <input type="button" value="Enviar" onclick="validar()">
+            </form>
+        </div>
+        <script>
+            var CEP = document.getElementById("txtCEP")
+            var Endereco = document.getElementById("txtEndereco")
+
+            function validar(){
+                if(Endereco.value === "" || CEP.value === ""){
+                    alert("Você não pôs preencheu algum dos dados sangue bom")
+                }else if (isNaN(CEP.value)){
+                    alert("No espaço de preenchimento do CEP é pra conter apenas números chefe")
+                }else{
+                    alert("Obrigado pelos dados meu consagrado ou minha consagrada")
+                }
+            }
+        </script>
+    </body>
+</html>
